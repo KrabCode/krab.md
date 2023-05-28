@@ -22,15 +22,15 @@
 
             var date1 = new Date();
             var dateFlat = new Date("06/26/2023");
-            var dateCats = new Date("08/01/2023");
+            var dateCats = new Date("08/10/2023");
             // To calculate the time difference of two dates
             var difference_flat = dateFlat.getTime() - date1.getTime();
             var difference_cats = dateCats.getTime() - date1.getTime();
             // To calculate the no. of days between two dates
             var difference_flat_days = (difference_flat / (1000 * 3600 * 24));
             var difference_cat_days = (difference_cats / (1000 * 3600 * 24));
-            document.getElementById("timeFlat").innerHTML = difference_flat_days;
-            document.getElementById("timeCats").innerHTML = difference_cat_days;
+            document.getElementById("timeFlat").innerHTML = difference_flat_days.substring(0,10);
+            document.getElementById("timeCats").innerHTML = difference_cat_days.substring(0,10);
             window.requestAnimationFrame(update);
         }
     </script>
