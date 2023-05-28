@@ -22,8 +22,8 @@
         // To set two dates to two variables
         var date1 = new Date();
 
-        var dateFlat = new Date("06-26-2023");
-        var dateCats = new Date("08-01-2023");
+        var dateFlat = new Date("06/26/2023");
+        var dateCats = new Date("08/01/2023");
 
         // To calculate the time difference of two dates
         var difference_flat = dateFlat.getTime() - date1.getTime();
@@ -33,7 +33,7 @@
         var difference_flat_days = Math.floor(difference_flat / (1000 * 3600 * 24));
         var difference_cat_days = Math.floor(difference_cats / (1000 * 3600 * 24));
 
-        document.getElementById("timeFlat").innerHTML = "" + difference_flat_days;
-        document.getElementById("timeCats").innerHTML = "" + difference_cat_days;
+        document.getElementById("timeFlat").innerHTML = difference_flat_days;
+        document.getElementById("timeCats").innerHTML = difference_cat_days;
     </script>
     </html>
