@@ -29,8 +29,8 @@
             // To calculate the no. of days between two dates
             var difference_flat_days = (difference_flat / (1000 * 3600 * 24));
             var difference_cat_days = (difference_cats / (1000 * 3600 * 24));
-            document.getElementById("timeFlat").innerHTML = difference_flat_days.substring(0,10);
-            document.getElementById("timeCats").innerHTML = difference_cat_days.substring(0,10);
+            document.getElementById("timeFlat").innerHTML = (""+difference_flat_days).substring(0,10);
+            document.getElementById("timeCats").innerHTML = (""+difference_cat_days).substring(0,10);
             window.requestAnimationFrame(update);
         }
     </script>
