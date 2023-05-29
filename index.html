@@ -1,20 +1,48 @@
 
     <!doctype html>
-    <html>
+    <html lang="html">
     <head>
 
+    <style>
+        html, body {
+            height: 100%;
+            background: rgb(24,24,24);
+        }
+        body {
+            margin: 0;
+        }
+        .flex-container {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-flow: column wrap;
+        }
+        .flex-item {
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
     <title>krab.md</title>
     </head>
     <body>
-    <h1>important dates</h1>
-    ---
-    <h2>days until flat is free (26.6.2023)</h2>
-    <h1 id="timeFlat">hello</h1>
-    ---
-    <h2>days until cats move in (10.8.2023)</h2>
-    <h1 id="timeCats">hello</h1>
-    </body>
+    <div class="flex-container">
 
+            <p class="flex-item">days until (26.6.2023)</p>
+            <p class="flex-item" id="timeFlat">hello</p>
+            <hr><hr><hr>
+            <p class="flex-item">days until (10.8.2023)</p>
+            <p class="flex-item" id="timeCats">hello</p>
+
+            <img src="assets/layout.gif" alt="skulls for the skull god"/>
+    </div>
+
+    </body>
     <script>
         window.requestAnimationFrame(update);
 
@@ -29,8 +57,8 @@
             // To calculate the no. of days between two dates
             var difference_flat_days = (difference_flat / (1000 * 3600 * 24));
             var difference_cat_days = (difference_cats / (1000 * 3600 * 24));
-            document.getElementById("timeFlat").innerHTML = (""+difference_flat_days).substring(0,10);
-            document.getElementById("timeCats").innerHTML = (""+difference_cat_days).substring(0,10);
+            document.getElementById("timeFlat").innerHTML = (""+difference_flat_days).substring(0,9);
+            document.getElementById("timeCats").innerHTML = (""+difference_cat_days).substring(0,9);
             window.requestAnimationFrame(update);
         }
     </script>
