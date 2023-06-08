@@ -1,6 +1,7 @@
 
     <!doctype html>
     <html lang="html">
+
     <head>
 
     <style>
@@ -9,19 +10,25 @@
         }
         body {
             margin: 0;
+            background-color: darkslateblue;
+        }
+        img{
+            margin: 10pt;
         }
         ul{
-            width: fit-content;
-            background: black;
-            margin: 100pt auto auto;
+            width: auto;
+            background: rgb(26,26,66);
+            margin: auto auto;
+            text-align: left;
         }
         li {
-            padding: 20pt;
+            padding: 8pt;
             color: white;
             font-weight: normal;
-            font-size: 2em;
-            text-align: left;
+            font-size: 1em;
             list-style-type: none;
+
+            font-family: monospace, monospace;
         }
         div{
             display:inline;
@@ -29,11 +36,15 @@
     </style>
     <title>krab.md</title>
     </head>
-    <body background="assets/cat.gif" style="background-size: 60px">
+    <body>
+    <img src="assets/cat.gif" alt="cat squish"/>
+
     <ul>
-        <li>days until (26.6.2023): <div id="timeFlat">hello</div></li>
-        <li>days until (10.8.2023): <div class="flex-item" id="timeCats">hello</div></li>
+        <li><div id="timeFlat">hello</div> until 26.6.2023</li>
+        <li><div id="timeCats">hello</div> until 10.08.2023</li>
+
     </ul>
+
 
     </body>
     <script>
@@ -41,18 +52,43 @@
 
         function update(){
 
-            var date1 = new Date();
-            var dateFlat = new Date("06/26/2023");
-            var dateCats = new Date("08/10/2023");
-            // To calculate the time difference of two dates
-            var difference_flat = dateFlat.getTime() - date1.getTime();
-            var difference_cats = dateCats.getTime() - date1.getTime();
-            // To calculate the no. of days between two dates
-            var difference_flat_days = (difference_flat / (1000 * 3600 * 24));
-            var difference_cat_days = (difference_cats / (1000 * 3600 * 24));
-            document.getElementById("timeFlat").innerHTML = (""+difference_flat_days).substring(0,9);
-            document.getElementById("timeCats").innerHTML = (""+difference_cat_days).substring(0,9);
+            let dateNow = new Date();
+            let dateFlat = new Date("06/26/2023");
+            let dateCats = new Date("08/10/2023");
+            let flatMinusNow = getSpan(dateNow, dateFlat);
+            let catsMinusNow = getSpan(dateNow, dateCats);
+
+            document.getElementById("timeFlat").innerHTML = (
+                `${flatMinusNow.days}d ${flatMinusNow.hours}:${flatMinusNow.minutes}:${flatMinusNow.seconds}`
+            );
+            document.getElementById("timeCats").innerHTML = (
+                `${catsMinusNow.days}d ${catsMinusNow.hours}:${catsMinusNow.minutes}:${catsMinusNow.seconds}`
+            );
+
             window.requestAnimationFrame(update);
+        }
+
+        function getSpan(date1, date2){
+            let diff = date2.getTime() - date1.getTime();
+
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            diff -=  days * (1000 * 60 * 60 * 24);
+
+            let hours = Math.floor(diff / (1000 * 60 * 60));
+            diff -= hours * (1000 * 60 * 60);
+
+            let mins = Math.floor(diff / (1000 * 60));
+            diff -= mins * (1000 * 60);
+
+            let seconds = Math.floor(diff / (1000));
+            diff -= seconds * (1000);
+
+            return {
+                "days" : days,
+                "hours" : String(hours).padStart(2, '0'),
+                "minutes" : String(mins).padStart(2, '0'),
+                "seconds" : String(seconds).padStart(2,'0')
+            }
         }
     </script>
     </html>
