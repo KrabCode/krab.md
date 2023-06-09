@@ -1,14 +1,14 @@
 function setup() {
     createCanvas(windowWidth, windowHeight, WEBGL);
-}
-
-function draw() {
-    background(36);
-    translate(-width/2, -height/2);
     drawDotGrid();
 }
 
+function draw() {
+}
+
 function drawDotGrid() {
+    background(36);
+    translate(-width/2, -height/2);
     noFill();
     stroke(120);
     strokeWeight(0.5);
@@ -23,4 +23,5 @@ function drawDotGrid() {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
+    drawDotGrid();
 }
