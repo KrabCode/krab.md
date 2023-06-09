@@ -1,6 +1,6 @@
 "use strict";
 
-let settings = {
+let krabGridSettings = {
     "weight" : 2.5,
     "ptColor" : 120,
     "bgColor" : 36,
@@ -9,18 +9,18 @@ let settings = {
 }
 
 let parseUrlParams = () => {
-    let keys = Object.keys(settings);
+    let keys = Object.keys(krabGridSettings);
     console.log("this sketch accepts the following optional url parameters with some sane defaults: " + keys);
-    console.log("example url: https://krab.md/sketches/grid?step=30&offset=15")
-    let urlParams = new URLSearchParams(window.location.href);
+    console.log("example url: https://krab.md/sketches/grid?step=60&ptColor=36&bgColor=200")
+    let urlParams = new URLSearchParams(new URL(window.location).search);
     for(let i in keys){
         let key = keys[i];
         if(urlParams.has(key)){
-            settings[key] = parseFloat(urlParams.get(key));
+            krabGridSettings[key] = parseFloat(urlParams.get(key));
         }
     }
-    console.log("settings after parsing url params:");
-    console.dir(settings);
+    console.log("krabGridSettings after parsing url params:");
+    console.dir(krabGridSettings);
 }
 
 function setup() {
@@ -33,12 +33,12 @@ function draw() {
 }
 
 function drawDotGrid() {
-    background(settings.bgColor);
+    background(krabGridSettings.bgColor);
     noFill();
-    stroke(settings.ptColor);
-    strokeWeight(settings.weight);
-    let offset = settings.offset;
-    let step = settings.step;
+    stroke(krabGridSettings.ptColor);
+    strokeWeight(krabGridSettings.weight);
+    let offset = krabGridSettings.offset;
+    let step = krabGridSettings.step;
     for (let x = offset; x < width; x+= step) {
         for (let y = offset; y < height; y+= step) {
             point(x,y);
