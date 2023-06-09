@@ -1,4 +1,6 @@
-let settings = {
+"use strict";
+
+window.settings = {
     "weight" : 2.5,
     "ptColor" : 120,
     "bgColor" : 36,
@@ -6,7 +8,7 @@ let settings = {
     "offset" : 10
 }
 
-function parseUrlParams() {
+let parseUrlParams = () => {
     let keys = Object.keys(settings);
     console.log("this sketch accepts the following optional url parameters with some sane defaults: " + keys);
     console.log("example url: https://krab.md/sketches/grid?step=30&offset=15")
