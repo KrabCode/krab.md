@@ -1,6 +1,6 @@
 "use strict";
 
-window.settings = {
+let settings = {
     "weight" : 2.5,
     "ptColor" : 120,
     "bgColor" : 36,
