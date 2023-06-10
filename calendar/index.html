@@ -9,36 +9,40 @@
             height: 100%;
         }
         body {
-            margin: 0;
+            margin: 30pt;
             background : darkslateblue;
+            color: white;
+            font-weight: normal;
+            font-size: 2em;
+            font-family: monospace, monospace;
         }
         img{
-            margin: 10pt;
+
         }
+
         ul{
             width: auto;
             background: rgb(26,26,66);
-            margin: auto auto;
+            padding: 40pt;
             text-align: left;
+            list-style-type: "-";
         }
         li {
-            padding: 8pt;
-            color: white;
-            font-weight: normal;
-            font-size: 1em;
-            list-style-type: none;
-
-            font-family: monospace, monospace;
+            padding: 4pt;
+        }
+        .header{
+            margin: 20pt;
         }
         div{
             display:inline;
+            color: white;
+            font-family: monospace, monospace;
         }
     </style>
     <title>krab.md</title>
     </head>
     <body>
-    <img src="../assets/cat.gif" alt="cat squish"/>
-
+    <div class="header" id="timeNow">hi</div>
     <ul>
         <li><div id="timeFlat">hello</div> until 26.6.2023</li>
         <li><div id="timeCats">hello</div> until 10.8.2023</li>
@@ -57,6 +61,8 @@
             let dateCats = new Date("08/10/2023");
             let flatMinusNow = getSpan(dateNow, dateFlat);
             let catsMinusNow = getSpan(dateNow, dateCats);
+
+            document.getElementById("timeNow").innerHTML = dateNow.toUTCString();
 
             document.getElementById("timeFlat").innerHTML = (
                 `${flatMinusNow.days}d ${flatMinusNow.hours}:${flatMinusNow.minutes}:${flatMinusNow.seconds}`
