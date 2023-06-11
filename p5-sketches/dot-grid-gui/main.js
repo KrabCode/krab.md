@@ -1,3 +1,4 @@
+// https://cocopon.github.io/tweakpane/
 const pane = new Tweakpane.Pane();
 
 let PARAMS = {
@@ -8,6 +9,11 @@ let PARAMS = {
     "foreground" : '#787878',
     "background" : '#242424'
 }
+
+let constraints = new Map();
+constraints.set('step', {min: 20, max: 100, step: 1});
+
+
 
 const f = pane.addFolder({
     title: 'dot-grid-gui',
@@ -21,7 +27,8 @@ const btn = f.addButton({
 
 let paramNames = Object.keys(PARAMS);
 for(let i = 0; i < paramNames.length; i++){
-    f.addInput(PARAMS, paramNames[i]);
+    let name = paramNames[i];
+    f.addInput(PARAMS, name, constraints.get(name));
 }
 
 btn.on('click', () => {
@@ -32,6 +39,7 @@ f.on('change', function(ev){
     drawDotGrid();
 });
 
+// https://p5js.org/
 function setup() {
     createCanvas(windowWidth, windowHeight);
     drawDotGrid();
@@ -54,8 +62,8 @@ function drawDotGrid() {
     let margin = PARAMS.margin;
     let offset = PARAMS.offset;
     let step = PARAMS.step;
-    for (let x = -margin+offset; x < width+margin*2; x+= step) {
-        for (let y = -margin+offset; y < height+margin*2; y+= step) {
+    for (let x = -margin+offset; x < width+offset+margin*2; x+= step) {
+        for (let y = -margin+offset; y < height+offset+margin*2; y+= step) {
             point(x,y);
         }
     }
