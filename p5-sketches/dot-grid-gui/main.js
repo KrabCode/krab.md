@@ -10,7 +10,7 @@ let PARAMS = {
 }
 
 const f = pane.addFolder({
-    title: 'dot-grid',
+    title: 'dot-grid-gui',
     expanded: true,
 });
 
