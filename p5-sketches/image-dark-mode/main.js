@@ -33,6 +33,10 @@ for(let i = 0; i < paramNames.length; i++){
     folder.addInput(PARAMS, name, constraints.get(name));
 }
 
+folder.on('change', (e) =>{
+    update();
+});
+
 // https://p5js.org/
 function preload(){
     // load an image on startup for debug purposes
@@ -41,7 +45,7 @@ function preload(){
 
 function setup() {
     setupFileInput();
-    createCanvas(displayWidth, displayHeight);
+    createCanvas(innerWidth, innerHeight);
     colorMode(RGB,1,1,1,1);
 }
 
@@ -52,8 +56,11 @@ function draw() {
     if(!canvasIsSetUp){
         resizeCanvas(img.width, img.height);
         canvasIsSetUp = true;
-        return;
+        update();
     }
+}
+
+function update(){
     push();
 
     blendMode(BLEND);
