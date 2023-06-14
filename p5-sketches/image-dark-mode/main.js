@@ -35,15 +35,13 @@ for(let i = 0; i < paramNames.length; i++){
 
 // https://p5js.org/
 function preload(){
-    darkenShader = loadShader('vert.glsl', 'frag.glsl');
-
     // load an image on startup for debug purposes
-    // img = loadImage("https://picsum.photos/800.jpg");
+    img = loadImage("https://picsum.photos/800.jpg");
 }
 
 function setup() {
     setupFileInput();
-    createCanvas(displayWidth, displayHeight, WEBGL);
+    createCanvas(displayWidth, displayHeight);
     colorMode(RGB,1,1,1,1);
 }
 
@@ -52,25 +50,30 @@ function draw() {
         return;
     }
     if(!canvasIsSetUp){
-        resizeCanvas(img.width, img.height, WEBGL);
+        resizeCanvas(img.width, img.height);
+        canvasIsSetUp = true;
+        return;
     }
     push();
-    background(0);
-    shader(darkenShader);
-    darkenShader.setUniform('u_img', img);
-    darkenShader.setUniform('u_invert', PARAMS.invert);
-    darkenShader.setUniform('u_resolution', [img.width, img.height]);
-    darkenShader.setUniform('u_mouse', [mouseX, height-mouseY]);
-    darkenShader.setUniform('u_minColor', [red(PARAMS.min), green(PARAMS.min), blue(PARAMS.min)]);
-    darkenShader.setUniform('u_maxColor', [red(PARAMS.max), green(PARAMS.max), blue(PARAMS.max)]);
 
-    quad(-1, -1, 1, -1, 1, 1, -1, 1);
-    resetShader();
+    blendMode(BLEND);
+    image(img, 0,0);
+
+    if(PARAMS.invert){
+        filter(INVERT);
+    }
+
+    blendMode(LIGHTEST);
+    noStroke();
+    fill(PARAMS.min);
+    rect(0,0,img.width, img.height);
+
+    blendMode(DARKEST);
+    noStroke();
+    fill(PARAMS.max);
+    rect(0,0,img.width, img.height);
+
     pop();
-}
-
-function windowResized() {
-
 }
 
 function setupFileInput() {
