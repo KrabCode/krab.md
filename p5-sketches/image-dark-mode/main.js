@@ -34,7 +34,7 @@ for(let i = 0; i < paramNames.length; i++){
 }
 
 folder.on('change', (e) =>{
-    update();
+    updateVisual();
 });
 
 // https://p5js.org/
@@ -56,11 +56,11 @@ function draw() {
     if(!canvasIsSetUp){
         resizeCanvas(img.width, img.height);
         canvasIsSetUp = true;
-        update();
+        updateVisual();
     }
 }
 
-function update(){
+function updateVisual(){
     push();
 
     blendMode(BLEND);

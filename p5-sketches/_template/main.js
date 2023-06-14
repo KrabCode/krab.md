@@ -29,7 +29,7 @@ for(let i = 0; i < paramNames.length; i++){
 }
 
 folder.on('change', function(ev){
-    update();
+
 });
 
 // https://p5js.org/
