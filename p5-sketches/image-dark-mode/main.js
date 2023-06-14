@@ -2,16 +2,21 @@ const pane = new Tweakpane.Pane();
 
 let canvasIsSetUp = false;
 let img;
-let darkenShader;
 
 const PARAMS = {
-    "invert" : false,
-    "min" : '#000000',
-    "max" : '#FFFFFF'
+    "invert?" : false,
+    "grayscale?" : false,
+    "posterize?" : false,
+    "posterize" : 1,
+    "threshold?" : false,
+    "threshold" : 0.5,
+    "minimum" : '#000000',
+    "maximum" : '#FFFFFF',
+
 }
 
 let constraints = new Map();
-constraints.set('scale', {min: 0.01, max: 2, step: 0.01});
+constraints.set('posterize', {"min": 2});
 
 const folder = pane.addFolder({
     title: document.title,
@@ -40,7 +45,7 @@ folder.on('change', (e) =>{
 // https://p5js.org/
 function preload(){
     // load an image on startup for debug purposes
-    //  img = loadImage("https://picsum.photos/800.jpg");
+    //  img = loadImage("https://picsum.photos/800/800.jpg");
 }
 
 function setup() {
@@ -66,18 +71,27 @@ function updateVisual(){
     blendMode(BLEND);
     image(img, 0,0);
 
-    if(PARAMS.invert){
+    if(PARAMS["invert?"]){
         filter(INVERT);
+    }
+    if(PARAMS["grayscale?"]){
+        filter(GRAY);
+    }
+    if(PARAMS["posterize?"]){
+        filter(POSTERIZE, PARAMS["posterize"]);
+    }
+    if(PARAMS["threshold?"]){
+        filter(THRESHOLD, PARAMS["threshold"]);
     }
 
     blendMode(LIGHTEST);
     noStroke();
-    fill(PARAMS.min);
+    fill(PARAMS.minimum);
     rect(0,0,img.width, img.height);
 
     blendMode(DARKEST);
     noStroke();
-    fill(PARAMS.max);
+    fill(PARAMS.maximum);
     rect(0,0,img.width, img.height);
 
     pop();
