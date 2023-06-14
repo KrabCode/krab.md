@@ -260,3 +260,7 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+body{
+ background-color: #242424;
+}
