@@ -36,7 +36,7 @@ for(let i = 0; i < paramNames.length; i++){
 // https://p5js.org/
 function preload(){
     // load an image on startup for debug purposes
-    img = loadImage("https://picsum.photos/800.jpg");
+    //  img = loadImage("https://picsum.photos/800.jpg");
 }
 
 function setup() {
