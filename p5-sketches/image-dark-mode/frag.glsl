@@ -4,6 +4,7 @@ precision mediump float;
 
 uniform vec2 u_resolution;
 uniform vec2 u_mouse;
+uniform vec3 u_minColor;
 uniform float u_time;
 uniform bool u_invert;
 uniform sampler2D u_img;
@@ -18,5 +19,6 @@ void main() {
     if(u_invert){
         clr = vec3(1.-clr);
     }
+    clr = max(u_minColor, clr);
     gl_FragColor = vec4(clr.rgb,1.0);
 }

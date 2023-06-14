@@ -5,7 +5,9 @@ let img;
 let darkenShader;
 
 const PARAMS = {
-    "invert" : false
+    "invert" : false,
+    "min" : '#000000',
+    "max" : '#FFFFFF'
 }
 
 let constraints = new Map();
@@ -40,6 +42,7 @@ function preload(){
 function setup() {
     setupFileInput();
     createCanvas(displayWidth, displayHeight, WEBGL);
+    colorMode(RGB,1,1,1,1);
 }
 
 function draw() {
@@ -56,6 +59,9 @@ function draw() {
     darkenShader.setUniform('u_invert', PARAMS.invert);
     darkenShader.setUniform('u_resolution', [img.width, img.height]);
     darkenShader.setUniform('u_mouse', [mouseX, height-mouseY]);
+    darkenShader.setUniform('u_minColor', [red(PARAMS.min), green(PARAMS.min), blue(PARAMS.min)]);
+    darkenShader.setUniform('u_maxColor', [red(PARAMS.max), green(PARAMS.max), blue(PARAMS.max)]);
+
     quad(-1, -1, 1, -1, 1, 1, -1, 1);
     resetShader();
     pop();
