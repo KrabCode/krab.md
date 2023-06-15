@@ -1,9 +1,10 @@
 const pane = new Tweakpane.Pane();
 
-let canvasIsSetUp = false;
 let img;
+let canvas;
 
 const PARAMS = {
+    "scale" : 0.2,
     "invert?" : false,
     "grayscale?" : false,
     "posterize?" : false,
@@ -12,7 +13,6 @@ const PARAMS = {
     "threshold" : 0.5,
     "minimum" : '#000000',
     "maximum" : '#FFFFFF',
-
 }
 
 let constraints = new Map();
@@ -29,6 +29,7 @@ const btn = folder.addButton({
 });
 
 btn.on('click', (e) =>{
+    updateVisual(true);
     save(document.title + ".png");
 });
 
@@ -39,7 +40,6 @@ for(let i = 0; i < paramNames.length; i++){
 }
 
 folder.on('change', (e) =>{
-    updateVisual();
 });
 
 // https://p5js.org/
@@ -49,27 +49,33 @@ function preload(){
 }
 
 function setup() {
+    canvas = createCanvas(innerWidth, innerHeight);
     setupFileInput();
-    createCanvas(innerWidth, innerHeight);
     colorMode(RGB,1,1,1,1);
 }
 
 function draw() {
+    updateVisual();
+}
+
+function updateVisual(fullRes){
+    blendMode(BLEND);
+    background(0.1);
     if(!img){
         return;
     }
-    if(!canvasIsSetUp){
-        resizeCanvas(img.width, img.height);
-        canvasIsSetUp = true;
-        updateVisual();
+
+    let w = img.width * PARAMS.scale;
+    let h = img.height * PARAMS.scale;
+    if(fullRes){
+        w = img.width;
+        h = img.height;
     }
-}
+    if(width !== w || height !== h){
+        canvas.resize(w, h);
+    }
 
-function updateVisual(){
-    push();
-
-    blendMode(BLEND);
-    image(img, 0,0);
+    image(img, 0, 0, width, height);
 
     if(PARAMS["invert?"]){
         filter(INVERT);
@@ -85,16 +91,12 @@ function updateVisual(){
     }
 
     blendMode(LIGHTEST);
-    noStroke();
     fill(PARAMS.minimum);
     rect(0,0,img.width, img.height);
 
     blendMode(DARKEST);
-    noStroke();
     fill(PARAMS.maximum);
     rect(0,0,img.width, img.height);
-
-    pop();
 }
 
 function setupFileInput() {
@@ -104,9 +106,9 @@ function setupFileInput() {
 
 function handleFile(file) {
     if (file.type === 'image') {
+        img = null;
         img = createImg(file.data, '');
         img.hide();
-        canvasIsSetUp = false;
     } else {
         img = null;
     }
