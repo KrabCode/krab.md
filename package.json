@@ -1,0 +1,36 @@
+{
+  "name": "krabmd",
+  "version": "1.0.0",
+  "description": "personal tool and showcase website hosted at krab.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrabCode/krab.md.git"
+  },
+  "keywords": [
+    "p5",
+    "tweakpane",
+    "html",
+    "css",
+    "js",
+    "ts",
+    "creative",
+    "coding",
+    "image",
+    "manipulation"
+  ],
+  "author": "Jakub 'Krab' Rak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrabCode/krab.md/issues"
+  },
+  "homepage": "https://github.com/KrabCode/krab.md#readme",
+  "dependencies": {
+    "p5": "^1.6.0",
+    "tweakpane": "^3.1.10",
+    "typescript": "^5.1.3"
+  }
+}
