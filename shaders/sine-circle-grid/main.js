@@ -2,14 +2,20 @@
 let time = 0;
 let frag;
 const pane = new Tweakpane.Pane();
+const chunks = [];
+
 
 const PARAMS = {
     "background" : '#000000',
     "foreground" : '#ffffff',
-    "res": 39,
-    "freq": 1000,
+    "res": 150,
     "time": 4,
-    "weight": 0.4
+    "weight": 0.4,
+    "sinPower": 1.2,
+    "sinAmp" : 1.,
+    "sinFreq" : 100,
+    "noiseFreq" : 100,
+    "noiseAmp" : 0.2
 }
 
 const constraints = new Map();
@@ -21,12 +27,21 @@ const folder = pane.addFolder({
     expanded: true,
 });
 
-const btn = folder.addButton({
+const btnSaveMp4 = folder.addButton({
+    title: 'record',
+    label: 'mp4',
+    hidden: true
+});
+btnSaveMp4.on('click', () => {
+    record();
+});
+
+const btnSavePng = folder.addButton({
     title: 'save',
     label: 'png',   // optional
 });
 
-btn.on('click', () => {
+btnSavePng.on('click', () => {
     save(document.title+".png");
 });
 
@@ -43,6 +58,8 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight, WEBGL);
     colorMode(RGB,1,1,1,1);
+
+
 }
 
 function windowResized() {
@@ -59,7 +76,46 @@ function draw() {
     frag.setUniform("freq", PARAMS.freq);
     frag.setUniform("d", PARAMS.weight*2.);
     frag.setUniform("resolution", [width, height]);
+    frag.setUniform("sinAmp", PARAMS.sinAmp);
+    frag.setUniform("sinFreq", PARAMS.sinFreq);
+    frag.setUniform("noiseAmp", PARAMS.noiseAmp);
+    frag.setUniform("noiseFreq", PARAMS.noiseFreq);
+    frag.setUniform("sinPower", PARAMS.sinPower);
     shader(frag);
     noStroke();
     rect(0, 0, width, height);
+}
+
+
+function record() {
+    chunks.length = 0;
+    let stream = document.querySelector('canvas').captureStream(30),
+        recorder = new MediaRecorder(stream);
+    recorder.ondataavailable = e => {
+        if (e.data.size) {
+            chunks.push(e.data);
+        }
+    };
+    recorder.onstop = exportVideo;
+    btnSaveMp4.on('click', () => {
+        recorder.stop();
+        btnSaveMp4.title = 'record';
+        btnSaveMp4.on('click', () => {
+            record();
+        });
+    });
+    recorder.start();
+    btnSaveMp4.title = 'stop & download';
+}
+
+function exportVideo(e) {
+    var blob = new Blob(chunks);
+    var vid = document.createElement('video');
+    vid.id = 'recorded'
+    vid.controls = true;
+    vid.src = URL.createObjectURL(blob);
+    vid.download = 'rec.webm';
+    document.body.appendChild(vid);
+    vid.click();
+    window.URL.revokeObjectURL(vid.url);
 }
