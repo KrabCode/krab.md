@@ -3,7 +3,7 @@ const PARAMS = {
     count : 100.0,
     scale : 1.0,
     frameRate: 0.0,
-    optimized: true
+    optimized: false
 };
 
 pane.addInput(
@@ -46,10 +46,9 @@ function getImageFromSprites(i){
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight, WEBGL);
     img1 = getImageFromSprites(1);
     img2 = getImageFromSprites(2);
-    texture(spritesheet);
+    createCanvas(windowWidth, windowHeight, WEBGL);
 }
 
 
@@ -69,6 +68,8 @@ function draw() {
         let y = Math.floor((s.w * i) / (width- width%s.w)) * s.h;
         translate(x, y);
         if(PARAMS.optimized){
+            texture(spritesheet);
+            textureMode(IMAGE);
             beginShape(QUADS);
             vertex(0,0,s.x, s.y);
             vertex(s.w,0,s.x+s.w, s.y);
