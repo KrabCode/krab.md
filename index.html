@@ -22,11 +22,22 @@
         font-family: monospace;
         font-size: 16pt;
     }
+    h4{
+        margin: 10pt;
+    }
     li{
         margin-top: 10pt;
         font-style: italic;
         list-style: "/ ";
+    }
 
+    img, video{
+        margin-top: 10pt;
+        margin-bottom: 20pt;
+    }
+
+    .comment{
+        color: darkgray;
     }
 </style>
 <head>
@@ -34,10 +45,11 @@
 </head>
 <body>
 <ul>
-    <li class="no-list-decor"><h2><a href=".">krab.md</a></h2></li>
+    <li class="no-list-decor"><h1><a href=".">krab.md</a></h1></li>
+
     <li class="no-list-decor">
         <ul>
-            <li>p5-sketches
+            <li><h4>p5-sketches</h4>
                 <ul >
                     <li><a href="./p5-sketches/image-dark-mode/index.html">image-dark-mode</a></li>
                     <li><a href="./p5-sketches/image-benchmark/index.html">image-benchmark</a></li>
@@ -49,16 +61,36 @@
                     </li>
                 </ul>
             </li>
-            <!--li>markdown
+            <li><h4>links</h4>
                 <ul>
-                    <li></li>
+                    <li><a href="https://github.com/KrabCode">github</a></li>
+                    <li><a href="https://www.tumblr.com/krabcode">tumblr</a></li>
+                    <li><a href="https://www.instagram.com/krabcode/">instagram</a></li>
+                    <li><a href="https://www.reddit.com/user/Simplyfire/submitted/">reddit</a></li>
                 </ul>
-            </li-->
+            </li>
+            <li><h4>gifs</h4>
+                <ul>
+                    <li>eternal textscape<br><img src="https://i.imgur.com/LU1SwXv.gif" alt="textscape"/></li>
+                    <li>circular sinewaves<br><img src="https://i.imgur.com/G44lkTc.gif" alt="bloomer"/></li>
+                </ul>
+            </li>
+            <li><h4>video</h4>
+                <ul>
+                    <li>hexagon quad strips<br><video controls src="https://i.imgur.com/jmQDJpw.mp4" ></video></li>
+                    <li>flow field drawing<br><video controls src="https://i.imgur.com/n9rMOE7.mp4" ></video></li>
+                    <li>2D robot polka dot<br><video controls src="https://i.imgur.com/JZ8dmgZ.mp4" ></video></li>
+                    <li>concentric tree<br><video controls src="https://i.imgur.com/7rMiHJ1.mp4" ></video></li>
+                    <li>seagull flocking with collisions<br><video controls src="https://i.imgur.com/5C7unVx.mp4" ></video></li>
+                </ul>
+            </li>
 
         </ul>
     </li>
-
-
 </ul>
+
+<div class="comment">&nbsp// todo: make this tree collapsible</div>
+<div class="comment">&nbsp// todo: write an 'about' section</div>
+<br>
 </body>
 </html>
