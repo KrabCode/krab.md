@@ -11,7 +11,7 @@ let PARAMS = {
 }
 
 let constraints = new Map();
-constraints.set('step', {min: 20, max: 100, step: 1});
+constraints.set('step', {min: 2, max: 100, step: 1});
 
 
 
