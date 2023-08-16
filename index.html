@@ -2,10 +2,6 @@
 <!doctype html>
 <html lang="html">
 <style>
-    .no-list-decor{
-        list-style: none;
-    }
-
     a{
         color: #8a8ae1;
         font-style: normal;
@@ -21,65 +17,128 @@
         position: absolute;
         font-family: monospace;
         font-size: 16pt;
+        user-select: none;
     }
 
-    h4{
-        margin: 10pt;
-    }
-
-    li{
-        margin-top: 10pt;
-        font-style: italic;
-        list-style: "/ ";
+    p{
+        font-size: 14pt;
+        margin-top: 10px;
     }
 
     img, video{
-        margin-top: 10pt;
-        margin-bottom: 20pt;
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: 600px;
     }
 
     .comment{
         color: darkgray;
     }
+
+    /* Remove default bullets */
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-left: 35pt;
+    }
+
+    li {
+        list-style-type: "- ";
+        margin-top: 5pt;
+    }
+
+    .small-left-margin{
+        margin-left: 15px;
+    }
+
+
+    .undecorated{
+        list-style: none;
+    }
+
+    /* Style the caret/arrow */
+    .caret {
+        cursor: pointer;
+        padding-right: 5px;
+        user-select: none;
+    }
+
+    /* Create the caret/arrow with a unicode, and style it */
+    .caret::before {
+        content: "+";
+        display: inline-block;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+
+
+    .caret:hover{
+        background: white;
+        color: black;
+    }
+
+    /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+    .caret-down::before {
+        content: "-"
+    }
+
+    /* Hide the nested list */
+    .nested {
+        display: none;
+    }
+
+    /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+    .active {
+        display: block;
+    }
+
 </style>
 <head>
     <title>krab.md</title>
 </head>
 <body>
-<ul>
-    <li class="no-list-decor"><h1><a href=".">krab.md</a></h1></li>
-
-    <li class="no-list-decor">
-        <ul>
-            <li><h4>p5-sketches</h4>
-                <ul >
-                    <li><a href="./p5-sketches/image-dark-mode/index.html">image-dark-mode</a></li>
-                    <li><a href="./p5-sketches/image-benchmark/index.html">image-benchmark</a></li>
-                    <li>wallpapers
-                        <ul>
-                            <li><a href="./p5-sketches/wallpapers/line-grid/index.html">line-grid</a></li>
-                            <li><a href="./p5-sketches/wallpapers/dot-grid/index.html">dot-grid</a></li>
-                        </ul>
-                    </li>
+<ul class="small-left-margin">
+    <li class="undecorated"><h1><a href=".">krab.md</a></h1></li>
+    <li class="undecorated">
+        <ul class="small-left-margin">
+            <li class="undecorated"><span class="caret">about</span>
+                <ul class="nested">
+                    <p>hello my name is krab and this is my personal website</p>
                 </ul>
+
             </li>
-            <li><h4>links</h4>
-                <ul>
+
+            <li class="undecorated"><span class="caret">links</span>
+                <ul class="nested">
                     <li><a href="https://github.com/KrabCode">github</a></li>
                     <li><a href="https://www.tumblr.com/krabcode">tumblr</a></li>
                     <li><a href="https://www.instagram.com/krabcode/">instagram</a></li>
                     <li><a href="https://www.reddit.com/user/Simplyfire/submitted/">reddit</a></li>
+                    <li><a href="https://krabcode.itch.io/cat-catcher">cat catcher</a> <p>^ game about herding cats for a photo</p> </li>
+
                 </ul>
             </li>
-            <li><h4>gifs</h4>
-                <ul>
+
+            <li class="undecorated"><span class="caret">p5</span>
+                <ul class="nested">
+                    <li><a href="./p5/image-dark-mode/index.html">image-dark-mode</a></li>
+                    <li><a href="./p5/image-benchmark/index.html">image-benchmark</a></li>
+                    <li>wallpapers
+                        <ul>
+                            <li><a href="./p5/wallpapers/line-grid/index.html">line-grid</a></li>
+                            <li><a href="./p5/wallpapers/dot-grid/index.html">dot-grid</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="undecorated"><span class="caret">gifs</span>
+                <ul class="nested">
                     <li>eternal textscape<br><img src="https://i.imgur.com/LU1SwXv.gif" alt="textscape"/></li>
                     <li>circular sinewaves<br><img src="https://i.imgur.com/G44lkTc.gif" alt="bloomer"/></li>
                 </ul>
             </li>
-            <li><h4>video</h4>
-                <ul>
+            <li class="undecorated"><span class="caret">video</span>
+                <ul class="nested">
                     <li>flow field drawing<br><video controls src="https://i.imgur.com/n9rMOE7.mp4" ></video></li>
                     <li>2D robot polka dot<br><video controls src="https://i.imgur.com/JZ8dmgZ.mp4" ></video></li>
                     <li>concentric tree<br><video controls src="https://i.imgur.com/7rMiHJ1.mp4" ></video></li>
@@ -91,8 +150,17 @@
     </li>
 </ul>
 
-<div class="comment">&nbsp// todo: make this tree collapsible</div>
-<div class="comment">&nbsp// todo: write an 'about' section</div>
 <br>
 </body>
 </html>
+
+<script>
+    var toggler = document.getElementsByClassName("caret");
+
+    for (let i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+        });
+    }
+</script>
