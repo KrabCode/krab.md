@@ -15,12 +15,9 @@
     body{
         color: #ffffff;
         background: #262626;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
+        padding-left: 30pt;
         font-family: monospace;
-        font-size: 1.5em;
+        font-size: 36px;
     }
 
     img, video, iframe{
@@ -33,18 +30,26 @@
         color: darkgray;
     }
 
+
     /* Remove default bullets */
     ul {
         list-style: none;
         padding: 0;
         margin-left: 30pt;
-        margin-bottom: 15pt;
+        margin-bottom: 10pt;
         margin-top: 10pt;
     }
 
     li {
         list-style: none;
-        margin-top: 5pt;
+        margin-top: 10pt;
+        background: #1a1a1a;
+        padding: 10pt;
+    }
+
+    p{
+        background: #131313;
+        padding: 10pt;
     }
 
     .small-left-margin{
@@ -58,8 +63,9 @@
         user-select: none;
     }
 
+
     .caret::before{
-        content: '- ';
+        content: '/';
     }
 
     .caret:hover{
@@ -89,25 +95,23 @@
     <li><span class="caret">about</span>
         <ul class="nested">
             <li><p>
-                Hello, I'm Krab and this is my website.<br><br>
+                Hello, I'm Krab and this is my portfolio.<br><br>
 
                 I like to make animations and simple games.<br>
                 I design my own GUIs to tweak the animations.<br><br>
 
                 I like <a href="https://processing.org">Processing</a> a lot.<br>
-                I also like C#, Java, JS, SQL, GLSL<br><br>
-
-                Look on my Works, ye Mighty, and despair!
+                I also like C#, Java, JS, SQL, GLSL
                 </p>
             </li>
         </ul>
 
     </li>
 
-    <li><span class="caret">lazy gui</span>
+    <li><span class="caret">lazy gui library</span>
         <ul class="nested">
             <li class="undecorated">
-                <p>Feature rich, visually minimalist GUI library for a smooth tinkering experience in Processing.</p>
+                <p>Feature rich, visually minimalist GUI library for a smooth tinkering experience in <a href="https://processing.org">Processing</a>.</p>
                 <a href="https://github.com/krabcode/lazygui">LazyGui</a> on GitHub
                     <br>
                 <a href="https://github.com/krabcode/lazygui">
@@ -116,7 +120,7 @@
             <li><video controls src="./assets/lazygui_promo.mp4" ></video></li>
         </ul>
     </li>
-    <li><span class="caret">cat catcher</span>
+    <li><span class="caret">cat catcher game</span>
     <ul class="nested">
 
     <li><p>Take a photo of a herd of cats as they try to run away from you.</p>
@@ -125,7 +129,7 @@
 
     </li>
         </ul>
-    <li><span class="caret">videos</span>
+    <li><span class="caret">animations</span>
         <ul class="nested">
             <li><video controls src="https://i.imgur.com/LU1SwXv.mp4" ></video></li>
             <li><video controls src="https://i.imgur.com/G44lkTc.mp4" ></video></li>
@@ -133,22 +137,22 @@
             <li><video controls src="https://i.imgur.com/JZ8dmgZ.mp4" ></video></li>
             <li><video controls src="https://i.imgur.com/7rMiHJ1.mp4" ></video></li>
             <li><video controls src="https://i.imgur.com/5C7unVx.mp4" ></video></li>
+            <li><video controls src="https://i.imgur.com/LfRYhMJ.mp4" ></video></li>
         </ul>
     </li>
 
     <li><span class="caret">wallpapers</span>
         <ul class="nested">
             <li class="undecorated"><p>online editors made with p5.js and tweakpane</p></li>
-            <li>- <a href="./p5/wallpapers/line-grid/index.html">line-grid</a></li>
-            <li>- <a href="./p5/wallpapers/dot-grid/index.html">dot-grid</a></li>
+            <li><a href="./p5/wallpapers/line-grid/index.html">line-grid</a></li>
+            <li><a href="./p5/wallpapers/dot-grid/index.html">dot-grid</a></li>
         </ul>
     </li>
     <li><span class="caret">links</span>
         <ul class="nested">
-            <li>- <a href="https://github.com/KrabCode">github</a></li>
-            <li>- <a href="https://www.tumblr.com/krabcode">tumblr</a></li>
-            <li>- <a href="https://www.instagram.com/krabcode/">instagram</a></li>
-            <li>- <a href="https://www.reddit.com/user/Simplyfire/submitted/">reddit</a></li>
+            <li><a href="https://github.com/KrabCode">github</a></li>
+            <li><a href="https://www.instagram.com/krabcode/">instagram</a></li>
+            <li><a href="https://www.reddit.com/user/Simplyfire/submitted/">reddit</a></li>
         </ul>
     </li>
 
