@@ -85,11 +85,3 @@ function getColorAt(time) {
     let afterCos = createVector(cos(beforeCos.x), cos(beforeCos.y), cos(beforeCos.z));
     return a.add(b.mult(afterCos));
 }
-
-function add(v1, v2){
-    return p5.Vector.add(v1, v2);
-}
-
-function mult(v1, v2){
-    return p5.Vector.mult(v1, v2);
-}
