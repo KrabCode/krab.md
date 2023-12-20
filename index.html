@@ -91,41 +91,17 @@
     <!--li><a href="./p5/image-dark-mode/index.html">image-dark-mode</a></li-->
     <!--li><a href="./p5/image-benchmark/index.html">image-benchmark</a></li--->
     <li><span class="caret">about</span>
-        <ul class="nested">
+        <ul class="nested active">
             <li><p>
                 Hello, I'm Krab and this is my portfolio.<br><br>
-
-                I like to make animations and simple games.<br>
-                I design my own GUIs to tweak the animations.<br><br>
-
-                I like <a href="https://processing.org">Processing</a> a lot.<br>
-                I also like C#, Java, JS, SQL, GLSL
+                I like to program animations and games in my free time.<br><br>
+                By day, I'm a full-stack developer at a tiny company.<br><br>
+                I &#10084; Processing, GLSL, Java, JavaScript, SQL, Flutter, Git, Bash
                 </p>
             </li>
         </ul>
     </li>
 
-    <li><span class="caret">lazy gui library</span>
-        <ul class="nested">
-            <li class="undecorated">
-                <p>Feature rich, visually minimalist GUI library for a smooth tinkering experience in <a href="https://processing.org">Processing</a>.</p>
-                <a href="https://github.com/krabcode/lazygui">LazyGui</a> on GitHub
-                    <br>
-                <a href="https://github.com/krabcode/lazygui">
-                </a>
-            </li>
-            <li><video controls src="./assets/lazygui_promo.mp4" ></video></li>
-        </ul>
-    </li>
-    <li><span class="caret">cat catcher game</span>
-    <ul class="nested">
-
-    <li><p>Take a photo of a herd of cats as they try to run away from you.</p>
-        <a href="https://krabcode.itch.io/cat-catcher">play</a> on itch.io<br>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/_BCfHS6NxyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-    </li>
-        </ul>
     <li><span class="caret">animations</span>
         <ul class="nested">
             <li><video loop controls src="https://i.imgur.com/7HhUs0a.mp4" ></video></li>
@@ -140,13 +116,28 @@
         </ul>
     </li>
 
-    <li><span class="caret">wallpapers</span>
+    <li><span class="caret">lazy gui</span>
         <ul class="nested">
-            <li class="undecorated"><p>online editors made with p5.js and tweakpane</p></li>
-            <li><a href="./p5/wallpapers/line-grid/index.html">line-grid</a></li>
-            <li><a href="./p5/wallpapers/dot-grid/index.html">dot-grid</a></li>
+            <li class="undecorated">
+                <p>A GUI library for <a href="https://www.processing.org">Processing</a> born out of frustration with other existing tools that make the creative programmer set up every GUI element before using it.
+                    This library handles all that boilerplate and allows the library user to only mention the GUI at a single place in their code where the values set by the GUI are needed.</p>
+                <p><a href="https://github.com/krabcode/lazygui">LazyGui</a> on GitHub</p>
+                <p><video controls src="./assets/lazygui_promo.mp4" ></video></p>
+            </li>
+            <li></li>
         </ul>
     </li>
+
+    <li><span class="caret">cat catcher game</span>
+        <ul class="nested">
+
+            <li><p>Take a photo of a herd of cats as they try to run away from you.</p>
+                <a href="https://krabcode.itch.io/cat-catcher">play</a> on itch.io<br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_BCfHS6NxyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </li>
+    </ul>
+
     <li><span class="caret">links</span>
         <ul class="nested">
             <li><a href="https://github.com/KrabCode">github</a></li>
@@ -162,10 +153,9 @@
 </html>
 
 <script>
-    var toggler = document.getElementsByClassName("caret");
-
-    for (let i = 0; i < toggler.length; i++) {
-        toggler[i].addEventListener("click", function() {
+    let carets = document.getElementsByClassName("caret");
+    for (let i = 0; i < carets.length; i++) {
+        carets[i].addEventListener("click", function() {
             this.parentElement.querySelector(".nested").classList.toggle("active");
             this.classList.toggle("caret-down");
         });
