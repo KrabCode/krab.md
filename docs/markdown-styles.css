@@ -49,17 +49,25 @@ a:visited {
 a:hover {
     color: #ffffff;
     background-color: #000000;
-    background-size: 120%;
     text-decoration: underline;
 }
-.social-logo {
+
+.social-logo-small {
     width: 36px;
-    height: 36px;
     text-decoration: none;
 }
-.social-logo:hover {
+
+.h2-social-text-small {
+    width: 100px;
+    position: relative;
+    top: 1px;
+    text-decoration: none;
+}
+
+.hover-background-transparent:hover {
     background-color: transparent;
 }
+
 ul, ol {
     padding: 0;
     margin: 0;
@@ -147,15 +155,11 @@ input[type=checkbox], input[type=radio] {
 }
 /* override default chrome & firefox settings */
 input:not([type="image"]), textarea {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
 
 input[type="search"] {
     -webkit-appearance: textfield;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-decoration {
@@ -242,7 +246,6 @@ button {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     background-color: #0064cd;
     background-repeat: repeat-x;
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
     background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
     background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
@@ -251,12 +254,9 @@ button {
     background-image: linear-gradient(top, #049cdb, #0064cd);
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    border: 1px solid #004b9a;
-    border-bottom-color: #003f81;
     -webkit-transition: 0.1s linear all;
     -moz-transition: 0.1s linear all;
     transition: 0.1s linear all;
-    border-color: #0064cd #0064cd #003f81;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 button:hover {

@@ -5,7 +5,7 @@
 ---
 ### LazyGui
 
-<video controls src="./assets/lazygui_promo.mp4" ></video>
+![](assets/gui_short.png)
 
 Feature rich, visually minimalist GUI for a smooth tinkering experience in [Processing](https://www.processing.org).
 
