@@ -11,4 +11,4 @@
 
 ---
 
-<a class="social-logo" href="https://github.com/KrabCode"><img class="social-logo" src="./assets/github-mark-white.png" alt="drawing"/></a>
+<a class="social-logo" href="https://github.com/KrabCode"><img class="social-logo" src="./assets/github-mark-white.png" alt=""/></a>
