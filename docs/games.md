@@ -1,4 +1,4 @@
-# [krab.md](../index.html)
+# [krab.md](index.html)
 
 ## - Games
 <br>
