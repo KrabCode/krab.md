@@ -2,13 +2,13 @@
 <br>
 
 ---
-## [- About](about/about.html)
-## [- Animations](animations/animations.html)
-## [- Games](games/games.html)
-## [- GUI](gui/gui.html)
+## [About](about/about.html)
+## [Animations](animations/animations.html)
+## [Games](games/games.html)
+## [GUI](gui/gui.html)
 
 <br>
 
 ---
 
-## [- GitHub](https://github.com/KrabCode)
+## [GitHub](https://github.com/KrabCode)

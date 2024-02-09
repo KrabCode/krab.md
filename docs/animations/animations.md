@@ -48,8 +48,6 @@ Flocking seagulls with bloody collisions. Fragment shader sea and clouds.
 
 ---
 See more of my animations on
-
-[- reddit](https://www.reddit.com/user/Simplyfire/submitted/)
-
-[- instagram](https://www.instagram.com/krabcode)
+- [reddit](https://www.reddit.com/user/Simplyfire/submitted/)
+- [instagram](https://www.instagram.com/krabcode)
 

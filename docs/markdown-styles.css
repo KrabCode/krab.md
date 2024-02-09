@@ -3,12 +3,22 @@
 body{
     margin: 0 auto;
     background: #262626;
-    font-family: Georgia, Palatino, serif;
     color: #ffffff;
+    font-family: sans-serif;
     line-height: 1;
     max-width: 960px;
     padding: 30px;
 }
+
+@media only screen and (max-width: 960px)
+{
+    body {
+        padding: 60px;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 h1, h2, h3, h4 {
     font-weight: 400;
 }
@@ -36,14 +46,16 @@ a {
     color: #ffffff;
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    text-decoration: underline;
     vertical-align: baseline;
 }
-a:hover {
-    text-decoration: underline;
-}
 a:visited {
-    color: #b7b7b7;
+    color: #e3e3e3;
+}
+a:hover {
+    color: #ffffff;
+    background-color: #000000;
+    text-decoration: underline;
 }
 ul, ol {
     padding: 0;
