@@ -10,7 +10,7 @@ body{
     padding: 30px;
 }
 
-@media only screen and (max-width: 960px)
+@media only screen and (max-width: 1060px)
 {
     body {
         padding: 60px;
