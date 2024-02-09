@@ -1,6 +1,5 @@
-# [krab.md](index.html)
+# [krab.md](index.html)/about
 
-## - About
 <br>
 
 ---

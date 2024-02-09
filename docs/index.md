@@ -2,13 +2,13 @@
 <br>
 
 ---
-## [About](about.html)
-## [Animations](animations.html)
-## [Games](games.html)
-## [GUI](gui.html)
+## [about](about.html)
+## [animations](animations.html)
+## [games](games.html)
+## [gui](gui.html)
 
 <br>
 
 ---
 
-## [GitHub](https://github.com/KrabCode)
+<a class="social-logo" href="https://github.com/KrabCode"><img class="social-logo" src="./assets/github-mark-white.png" alt="drawing"/></a>

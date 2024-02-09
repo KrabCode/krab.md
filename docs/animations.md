@@ -1,5 +1,4 @@
-# [krab.md](index.html)
-## - Animations
+# [krab.md](index.html)/animations
 <br>
 
 ---
