@@ -34,13 +34,12 @@ h5 {
     font-size: 18px;
 }
 
-
 a {
     color: #ffffff;
     margin: 0;
     padding: 0;
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
     vertical-align: baseline;
 }
 a:visited {
@@ -48,8 +47,8 @@ a:visited {
 }
 a:hover {
     color: #ffffff;
-    background-color: #000000;
     text-decoration: underline;
+    text-decoration-thickness: 3px;
 }
 
 .social-logo-small {
