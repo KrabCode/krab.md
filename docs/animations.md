@@ -3,7 +3,15 @@
 <br>
 
 ---
-<video controls src="https://imgur.com/c8XjQkd.mp4" loop ></video><br>
+<video controls src="https://i.imgur.com/el4kQPV.mp4" loop ></video><br>
+Moon phase calendar [(code)](https://gist.github.com/KrabCode/f5183a961fdae1725441a7ab1a367822)
+
+---
+<video controls src="https://i.imgur.com/YSQM753.mp4" loop ></video><br>
+Moon phase study [(code)](https://gist.github.com/KrabCode/72ac569ebaf72a202819d19122d3826e)
+
+---
+<video controls src="https://i.imgur.com/c8XjQkd.mp4" loop ></video><br>
 Candy asterisk galaxy
 
 ---
