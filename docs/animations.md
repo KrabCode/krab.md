@@ -64,4 +64,3 @@ Flocking seagulls with bloody collisions. Fragment shader sea and clouds.
 
 ---
 
-## see more on <a href="https://www.reddit.com/user/Simplyfire/submitted/"> <img class="h2-social-text-small" src="./assets/reddit-text-white.png"></a>
