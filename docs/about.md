@@ -5,30 +5,23 @@
 ---
 Hello, I'm Krab and this is my portfolio.
 
-I like to program animations and games in my free time.
+I like to make animations, games and open source libraries in my free time.
 
-By day, I'm a full-stack developer and dev-ops engineer.
+### Creatíve toolset
+
+- [Processing](https://processing.org/) (Java)
+  - [LazyGUI](gui.html)
+- [GLSL](https://www.shadertoy.com/user/Krabcode)
+- [Tooll3](http://tooll.io/)
+- [Photopea](https://www.photopea.com/)
 
 ---
 
-&#10084; Processing
+### Work
 
-&#10084; Java
-
-&#10084; p5.js
-
-&#10084; JavaScript
-
-&#10084; GLSL
-
-&#10084; SQL
-
-&#10084; Flutter
-
-&#10084; Bash
-
-&#10084; Git
-
-&#10084; GitHub
-
-&#10084; Markdown
+I also sell my time as a full-stack developer working with:
+- C#, Flutter front-end client apps
+- Wildfly java application servers
+- Linux servers
+- PostgreSQL databases
+- Git, Bash scripting
