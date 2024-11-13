@@ -5,9 +5,7 @@
 ---
 ## Hello, I'm Krab and this is my portfolio.
 
-I like to make animations, games and open source libraries in my free time.
-
-### Creative toolset
+#### Creative tools I use:
   - [Processing](https://processing.org/) (Java)
   - Fragment shaders (GLSL)
   - [Tooll3](http://tooll.io/)
@@ -16,7 +14,7 @@ I like to make animations, games and open source libraries in my free time.
 
 ---
 
-### Work toolset
+###### I also get paid for doing these different business things:
 - C#, Flutter front-end client apps
 - Wildfly java application servers
 - Linux servers
