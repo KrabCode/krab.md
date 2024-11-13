@@ -9,11 +9,10 @@ I like to make animations, games and open source libraries in my free time.
 
 ### Creative toolset
 
-- [Processing](https://processing.org/) (Java)
-  - [LazyGUI](gui.html)
-- Fragment shaders (GLSL)
-- [Tooll3](http://tooll.io/)
-- [Photopea](https://www.photopea.com/)
+  - [Processing](https://processing.org/) (Java)
+  - Fragment shaders (GLSL)
+  - [Tooll3](http://tooll.io/)
+  - [Photopea](https://www.photopea.com/)
 
 
 ---
