@@ -8,7 +8,6 @@
 I like to make animations, games and open source libraries in my free time.
 
 ### Creative toolset
-
   - [Processing](https://processing.org/) (Java)
   - Fragment shaders (GLSL)
   - [Tooll3](http://tooll.io/)
@@ -17,9 +16,7 @@ I like to make animations, games and open source libraries in my free time.
 
 ---
 
-### Work
-
-I also sell my time as a full-stack developer working with:
+### Work toolset
 - C#, Flutter front-end client apps
 - Wildfly java application servers
 - Linux servers
