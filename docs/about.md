@@ -11,7 +11,7 @@ I like to make animations, games and open source libraries in my free time.
 
 - [Processing](https://processing.org/) (Java)
   - [LazyGUI](gui.html)
-- [GLSL](https://www.shadertoy.com/user/Krabcode)
+- Fragment shaders (GLSL)
 - [Tooll3](http://tooll.io/)
 - [Photopea](https://www.photopea.com/)
 
