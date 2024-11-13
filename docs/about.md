@@ -3,17 +3,18 @@
 <br>
 
 ---
-Hello, I'm Krab and this is my portfolio.
+## Hello, I'm Krab and this is my portfolio.
 
 I like to make animations, games and open source libraries in my free time.
 
-### Creatíve toolset
+### Creative toolset
 
 - [Processing](https://processing.org/) (Java)
   - [LazyGUI](gui.html)
 - Fragment shaders (GLSL)
 - [Tooll3](http://tooll.io/)
 - [Photopea](https://www.photopea.com/)
+
 
 ---
 
