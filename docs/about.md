@@ -11,11 +11,10 @@
 - Fragment shaders (GLSL)
 - [Tooll3](http://tooll.io/)
 - [Photopea](https://www.photopea.com/)
-
-
+<br>
 ---
 
-###### I also get paid for doing these different business things:
+#### I also get paid for doing these various business things:
 
 - C#, Flutter front-end client apps
 - Wildfly java application servers
