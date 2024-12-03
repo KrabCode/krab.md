@@ -1,4 +1,5 @@
 # [krab.md](index.html)/animations
+Most of these animations are made in Processing, some are only shaders, some are made in Tooll3.
 
 <br>
 
@@ -51,8 +52,24 @@ Minimalist textscape.
 Concentric sine waves and rotating lines.
 
 ---
+<video controls src="https://i.imgur.com/1EgVDle.mp4" ></video><br>
+Minimalist mountain line drawing.
+
+---
+<video controls src="https://i.imgur.com/jCRLyan.mp4" ></video><br>
+Canyon gradient shader.
+
+---
 <video controls src="https://i.imgur.com/n9rMOE7.mp4" ></video><br>
 Particle flow field animated from a simple drawing.
+
+---
+<video controls src="https://i.imgur.com/D497RVS.mp4" ></video><br>
+Grid of Lissajous figures with glowy lines between nearby points.
+
+---
+<video controls src="https://i.imgur.com/JNxMc7c.mp4" ></video><br>
+Sci-fi control panel.
 
 ---
 <video controls src="https://i.imgur.com/7rMiHJ1.mp4" ></video><br>
