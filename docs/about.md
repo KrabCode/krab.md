@@ -1,9 +1,6 @@
 # [krab.md](index.html)/about
 
-<br>
-
 ---
-## Hello, I'm Krab and this is my portfolio.
 
 ### Creative tools I use:
 
@@ -11,7 +8,6 @@
 - [Fragment shaders](https://thebookofshaders.com/) (GLSL)
 - [Tooll3](http://tooll.io/)
 - [Figma](https://www.figma.com/)
-<br>
 
 ---
 
@@ -25,5 +21,5 @@
 
 ---
 
-#### Open for creative commissions
+#### Currently open for creative commissions
 - e-mail me at krabcode [at] gmail [dot] com

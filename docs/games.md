@@ -1,7 +1,5 @@
 # [krab.md](index.html)/games
 
-<br>
-
 ---
 
 ### Cat catcher
