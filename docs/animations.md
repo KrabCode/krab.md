@@ -16,10 +16,6 @@ Moon phase study [(code)](https://gist.github.com/KrabCode/72ac569ebaf72a202819d
 Candy asterisk galaxy
 
 ---
-<video controls src="https://i.imgur.com/aONGphe.mp4" loop ></video><br>
-Biblically accurate cat angel.
-
----
 <video controls src="https://i.imgur.com/KkbmpDL.mp4" loop ></video><br>
 Rotating cube textured with a screenshot of the sketch that contains it.
 
@@ -78,6 +74,30 @@ Mirrored tree folding into itself with a flowy feedback effect.
 ---
 <video controls src="https://i.imgur.com/5C7unVx.mp4" ></video>
 Flocking seagulls with bloody collisions. Fragment shader sea and clouds.
+
+---
+<video controls src="assets/mirror-sea.mp4" loop ></video><br>
+Mirror sea.
+
+---
+<video controls src="assets/rotating-mold.mp4" loop ></video><br>
+Rotating mold.
+
+---
+<video controls src="assets/instancing.mp4" loop ></video><br>
+Instancing.
+
+---
+<video controls src="assets/grainy-gradient.mp4" loop ></video><br>
+Grainy gradient.
+
+---
+<video controls src="assets/fishes.mp4" loop ></video><br>
+Fishes.
+
+---
+<video controls src="assets/feedback.mp4" loop ></video><br>
+Feedback.
 
 ---
 
